@@ -6,18 +6,22 @@
 //Input : nums = [1, 3, 5, 6], target = 5
 //Output : 2
 
-int searchInsert(int* nums, int numsSize, int target) {
-	int left = 0, right = numsSize - 1, ans = numsSize;
-	while (left <= right) {
-		int mid = ((right - left) >> 1) + left;
-		if (target <= nums[mid]) {
-			ans = mid;
-			right = mid - 1;
-		}
-		else {
-			left = mid + 1;
-		}
-	}
-	return ans;
+int searchInsert(int* nums, int numsSize, int target) 
+{
+    int left = 0, right = numsSize - 1, ans = numsSize;
+    while (left <= right) 
+    {
+        int mid = ((right - left) >> 1) + left;
+        if (target <= nums[mid]) 
+        {
+            ans = mid;
+            right = mid - 1;
+        } 
+        else 
+        {
+            left = mid + 1;
+        }
+    }
+    return ans;
 }
 //tip：查找搜索就要想到经典的二分查找并灵活运用
