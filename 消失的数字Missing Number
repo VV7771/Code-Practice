@@ -23,7 +23,6 @@ int missingNumber(int* nums, int numsSize)
 	for (; i<numsSize; i++)
 	{
 		num = num - nums[i];
-		printf("%d\n", num);
 	}
 	
 	return num;
@@ -37,29 +36,33 @@ int missingNumber(int* nums, int numsSize)
 		return 0;
 
 	int result = 0;
+	
 	//这个循环的结果是result = nums[0]^nums[1]^....nums[numsSize - 1]
 	for (int i = 0; i <numsSize; i++)
 	{
 		result ^= nums[i];
 	}
+	
 	//这个循环的作用是消除result中已经存在的数字
 	for (int i = 0; i <= numsSize; i++)
 	{
 		result ^= i;
 	}
+	
 	return result;
-
 }
 //////////////////////////////////////////////////////////////////////////
 //2.2
 int missingNumber(int* nums, int numsSize)
 {
-    int result=numsSize;
-    for(int i=0;i<numsSize;i++)
+    int result=numsSize, i=0;
+ 
+    for(;i<numsSize;i++)
     {
         result^=i^nums[i];
-    }return result;
-
+    }
+    
+return result;
 }
 //////////////////////////////////////////////////////////////////////////
 //way3:下标
@@ -70,6 +73,7 @@ int missingNumber(int* nums, int numsSize)
     {
         sum  +=  i - nums[i - 1] ;
     }
+    
     return sum;
 }
 
