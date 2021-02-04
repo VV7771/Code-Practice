@@ -59,33 +59,29 @@ int removeDuplicates(int* nums, int numsSize)
 }
 
 //way 2：双指针
-//2.1
 int removeDuplicates(int* nums, int numsSize)
 {
-    if(numsSize==0)
-    {
-        return 0;
-    }
+	assert(nums);
 
-    int i=0,j=0;
-    nums[j]=nums[i];  
-    for(;i<numsSize;i++)
-    {
-        if(nums[j]!=nums[i])
-       {
-            j++;
-            nums[j]=nums[i];
-       }
-    }
-    return j+1;
+	if (numsSize<2)
+	{
+		return numsSize;
+	}
+
+	int scr = 1,dst = 0;
+	while (scr<numsSize)
+	{
+		if (nums[scr] != nums[dst])
+		{
+			++dst;
+			nums[dst] = nums[scr];
+			++scr;
+		}
+		else
+		{
+			++scr;
+		}
+	}
+	return dst+1;
 }
-//2.2(不懂）
-int removeDuplicates(int* nums, int numsSize){
-    if(numsSize < 2)
-        return numsSize;
-    int a = 0, b = 1;
-    while(b < numsSize)
-        if(nums[b++] > nums[a])
-            nums[++a] = nums[b - 1];
-    return (a + 1);
-}
+
