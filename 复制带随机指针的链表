@@ -52,10 +52,7 @@ public class Solution {
     // them.
     this.visitedHash.put(head, node);
 
-    // Recursively copy the remaining linked list starting once from the next pointer and then from
-    // the random pointer.
-    // Thus we have two independent recursive calls.
-    // Finally we update the next and random pointers for the new node created.
+   
     node.next = this.copyRandomList(head.next);
     node.random = this.copyRandomList(head.random);
 
