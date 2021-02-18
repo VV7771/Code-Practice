@@ -13,7 +13,6 @@
 //Input : s = " "
 // Output : 0
 
-
 int lengthOfLastWord(char * s)
 { 
     
@@ -27,7 +26,7 @@ int lengthOfLastWord(char * s)
         if(s[i] !=' ')
         {
             bp++;
-        } else if(s[i]==' '&& bp!=0) break; //判断空格是否有效
+        } else if(s[i]==' '&& bp!=0) break;
     }   
     return bp;
 }
