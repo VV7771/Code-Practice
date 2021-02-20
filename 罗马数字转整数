@@ -28,7 +28,7 @@ int romanToInt(char * s){
     int i=0;
     int lenth=strlen(s);
     int sum=0;
-    for(i=0;i<lenth-1;i++)//这里i<lenth-1是防止数组越界，因为后面要用到i+1
+    for(i=0;i<lenth-1;i++)
     {
         switch(s[i])
         {
@@ -58,7 +58,7 @@ int romanToInt(char * s){
             
         }
     }
-    switch(s[i])//把在循环里没有判断的最后一个字符判断一下
+    switch(s[i])
     {
         case 'I':sum++;
                     break;
