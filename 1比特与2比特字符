@@ -22,10 +22,12 @@
 //			  bits[i] 总是0 或 1.
 //
 
-bool isOneBitCharacter(int* bits, int bitsSize){
-    for (int i = 0; i < bitsSize; ++i) {
+bool isOneBitCharacter(int* bits, int bitsSize)
+{
+    for (int i = 0; i < bitsSize; ++i)
+ {
         if (i == bitsSize-1) return (bits[i] ? false : true);
         if (bits[i]) ++i;        
-    }
+ }
     return false;
 }
