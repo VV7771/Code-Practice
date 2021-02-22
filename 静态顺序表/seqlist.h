@@ -14,6 +14,7 @@ typedef struct
 {
 	ElemType elem[MAXSIZE];
 	int last;//last记录最后一个元素的下标，若为空表则last为-1
+	
 }SeqList;
 
 void SeqListInit(SeqList *L);//初始化
