@@ -15,6 +15,7 @@ typedef struct
 	ElemType* a; // 存储数据空间的指针
 	int size;      // 有效数据个数 
 	int capacity;  // 容量空间大小
+	
 }SeqList;
 
 void SeqListInit(SeqList *L);
