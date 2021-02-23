@@ -35,6 +35,7 @@
 //	print(nums[i]);
 //}
 
+/////////////////////////////////////////////////////////////////////////////
 //way 1:遍历寻找
 int removeDuplicates(int* nums, int numsSize)
 {
@@ -58,6 +59,7 @@ int removeDuplicates(int* nums, int numsSize)
 	return numsSize;
 }
 
+/////////////////////////////////////////////////////////////////////////////
 //way 2：双指针
 int removeDuplicates(int* nums, int numsSize)
 {
