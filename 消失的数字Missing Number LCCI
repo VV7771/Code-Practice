@@ -14,6 +14,7 @@
 //
 //输入：[9, 6, 4, 2, 3, 5, 7, 0, 1]
 //输出：8
+
 //////////////////////////////////////////////////////////////////////////
 //way1:求和
 int missingNumber(int* nums, int numsSize)
@@ -27,6 +28,7 @@ int missingNumber(int* nums, int numsSize)
 	
 	return num;
 }
+
 //////////////////////////////////////////////////////////////////////////
 //way2:异或
 //2.1
@@ -51,6 +53,7 @@ int missingNumber(int* nums, int numsSize)
 	
 	return result;
 }
+
 //////////////////////////////////////////////////////////////////////////
 //2.2
 int missingNumber(int* nums, int numsSize)
@@ -64,6 +67,7 @@ int missingNumber(int* nums, int numsSize)
     
 return result;
 }
+
 //////////////////////////////////////////////////////////////////////////
 //way3:下标
 int missingNumber(int* nums, int numsSize)
