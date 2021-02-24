@@ -5,22 +5,27 @@
 //输入: 1->2->6->3->4->5->6, val = 6
 //输出: 1->2->3->4->5
 
-class Solution {
+class Solution 
+{
   public:
-  ListNode* removeElements(ListNode* head, int val) {
+  ListNode* removeElements(ListNode* head, int val)
+  {
     ListNode* sentinel = new ListNode(0);
     sentinel->next = head;
 
     ListNode *prev = sentinel, *curr = head, *toDelete = nullptr;
-    while (curr != nullptr) {
-      if (curr->val == val) {
+    while (curr != nullptr) 
+    {
+      if (curr->val == val) 
+      {
         prev->next = curr->next;
         toDelete = curr;
       } else prev = curr;
 
       curr = curr->next;
 
-      if (toDelete != nullptr) {
+      if (toDelete != nullptr) 
+      {
         delete toDelete;
         toDelete = nullptr;
       }
