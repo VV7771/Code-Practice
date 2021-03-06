@@ -1,6 +1,8 @@
-class PalindromeList {
+class PalindromeList 
+{
 public:
-    bool chkPalindrome(ListNode* A) {
+    bool chkPalindrome(ListNode* A) 
+    {
         // write code here
         if(A==NULL)
             return false;
