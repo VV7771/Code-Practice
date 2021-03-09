@@ -1,0 +1,38 @@
+给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。
+
+为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。注意，pos 仅仅是用于标识环的情况，并不会作为参数传递到函数中。
+
+说明：不允许修改给定的链表。
+
+struct hashTable {
+    struct ListNode* key;
+    UT_hash_handle hh;
+};
+
+struct hashTable* hashtable;
+
+struct hashTable* find(struct ListNode* ikey) {
+    struct hashTable* tmp;
+    HASH_FIND_PTR(hashtable, &ikey, tmp);
+    return tmp;
+}
+
+void insert(struct ListNode* ikey) {
+    struct hashTable* tmp = malloc(sizeof(struct hashTable));
+    tmp->key = ikey;
+    HASH_ADD_PTR(hashtable, key, tmp);
+}
+
+struct ListNode* detectCycle(struct ListNode* head) {
+    hashtable = NULL;
+    while (head != NULL) {
+        if (find(head) != NULL) {
+            return head;
+        }
+        insert(head);
+        head = head->next;
+    }
+    return false;
+}
+
+
