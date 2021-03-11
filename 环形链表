@@ -28,7 +28,8 @@ void insert(struct ListNode* ikey)
 }
 
 
-bool hasCycle(struct ListNode* head) 
+bool has
+Cycle(struct ListNode* head) 
 {
     hashtable = NULL;
     while (head != NULL) 
