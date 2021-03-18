@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 bool isLongPressedName(char* name, char* typed) 
  {
     int n = strlen(name), m = strlen(typed);
