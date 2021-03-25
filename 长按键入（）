@@ -2,7 +2,8 @@ bool isLongPressedName(char* name, char* typed)
  {
     int n = strlen(name), m = strlen(typed);
     int i = 0, j = 0;
-    while (j < m) {
+    while (j < m)
+    {
         if (i < n && name[i] == typed[j]) 
         {
             i++;
